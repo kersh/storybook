@@ -34,10 +34,14 @@ export default function(configDir) {
     ...config.devServer,
   };
 
+  const devHotMiddlewareOptions = {
+    path: path.join(config.output.publicPath, '__webpack_hmr'),
+  };
+
   const router = new Router();
   const webpackDevMiddlewareInstance = webpackDevMiddleware(compiler, devMiddlewareOptions);
   router.use(webpackDevMiddlewareInstance);
-  router.use(webpackHotMiddleware(compiler));
+  router.use(webpackHotMiddleware(compiler, devHotMiddlewareOptions));
 
   // custom middleware
   middlewareFn(router);
