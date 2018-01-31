@@ -1,6 +1,6 @@
 {
   "name": "storybook-vue-hmr-fix",
-  "version": "3.4.0",
+  "version": "3.4.1",
   "description": "Storybook for Vue: Develop Vue Component in isolation with Hot Reloading.",
   "homepage": "https://github.com/storybooks/storybook/tree/master/apps/vue",
   "bugs": {
